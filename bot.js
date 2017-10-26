@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-client.on('ready', () => {
-  client.user.setGame('GAME HERE')
+client.User.setGame('with Pallav.');
 })
 // Set the prefix
 let prefix = "p";
