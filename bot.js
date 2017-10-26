@@ -9,9 +9,7 @@ client.on('message', message => {
     
     if (message.content === 'pspam') {
         var count = 0;
-         while (count < 10){
-            message.reply('spam');
-            message.reply('spam');
+         while (count < 1000){
             message.reply('spam');
             count++;
          }
