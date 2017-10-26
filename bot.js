@@ -4,7 +4,7 @@ const client = new Discord.Client();
 let prefix = "p";
 
 client.on('ready', () => {
-  ClientUser.setGame(Brawl Stars, https://go.twitch.tv/pallavbs); // a game
+  client.setGame("Brawl Stars", "https://go.twitch.tv/pallavbs"); // a game
 
   console.log('I am ready!');
 });
