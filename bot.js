@@ -6,12 +6,16 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
+    
     if (message.content === 'pspam') {
-    	message.reply('spam');
-        message.reply('spam');
-        message.reply('spam');
-     
-       
+        var count = 0;
+         while (count < 10){
+            message.reply('spam');
+            message.reply('spam');
+            message.reply('spam');
+            count++;
+         }
+
        
   	}
 });
