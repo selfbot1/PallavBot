@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-client.User.setGame('with Pallav.');
 // Set the prefix
 let prefix = "p";
 
@@ -9,6 +8,7 @@ client.on("message", (message) => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
 
   if (message.content.startsWith(prefix + "ping")) {
+    client.User.setGame("with code"); // playing
     message.channel.send("pong!");
   } else
   if (message.content.startsWith(prefix + "foo")) {
