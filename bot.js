@@ -29,18 +29,19 @@ client.on("message", (message) => {
     message.channel.send("pong!");}
   if(command === "say"){
     console.log(args)
-    let text = args.slice(1).join(" ");      
-    let str=args[0];
-    args[1].replace("<#","");
-    var targetchannel=args[0].replace("<#","").replace(">","");
-    let channel = client.channels.get(targetchannel);
-    console.log(targetchannel);
-    console.log(channel);
-    message.delete();
-    if(channel.len() === 17){
+    let origtext = args.slice(0).join(" ");      
+    if(channel.len() === 20){
+      let text = args.slice(1).join(" ");      
+      let str=args[0];
+      args[1].replace("<#","");
+      var targetchannel=args[0].replace("<#","").replace(">","");
+      let channel = client.channels.get(targetchannel);
+      console.log(targetchannel);
+      console.log(channel);
+      message.delete();
       channel.send(text);}
     else{
-       message.channel.send(text);}
+       message.channel.send(origtext);}
   }
 });
 
