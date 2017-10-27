@@ -31,8 +31,8 @@ client.on("message", (message) => {
     console.log(args)
     let text = args.slice(1).join(" ");      
     let str=args[1];
-    var n=str.replace("<#","");
-    var targetchannel=n.replace(">","");
+    args[1].replace("<#","");
+    var targetchannel=args[1].replace("<#","").replace(">","");
     let channel = client.channels.get(targetchannel);
     console.log(targetchannel);
     console.log(channel);
