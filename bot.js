@@ -30,7 +30,8 @@ client.on("message", (message) => {
   if(command === "say"){
     let text = args.slice(1).join(" ");      
     let channelname = args.slice(0);
-    const channel = member.guild.channels.find('name', channelname);
+    let channel = client.channels.find("name", channelname);
+
     message.delete();
     message.channel.send(text);}
 });
