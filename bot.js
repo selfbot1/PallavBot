@@ -60,7 +60,6 @@ client.on("message", (message) => {
         dispatcher.on('end', () => voiceChannel.leave());
       });
   }
-});  
   }
 });
 
