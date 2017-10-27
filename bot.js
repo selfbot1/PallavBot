@@ -30,9 +30,7 @@ client.on("message", (message) => {
   if(command === "say"){
     console.log(args)
     let text = args.slice(1).join(" ");      
-    let channelname = args[0];
-    console.log(channelname)
-    const channel = client.channels.find("name", channelname);
+    let channel = args[0];
     console.log(channel)
     message.delete();
     message.channel.send(text);}
