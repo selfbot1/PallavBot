@@ -30,8 +30,8 @@ client.on("message", (message) => {
   if(command === "say"){
     console.log(args)
     let origtext = args.slice(0).join(" "); 
-    let chanell=args[0]
-    let len = chanell.length()
+    var chanell=args[0]
+    var len = chanell.length()
     if(len === 20){
       let text = args.slice(1).join(" ");      
       let str=args[0];
