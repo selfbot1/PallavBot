@@ -5,7 +5,7 @@ let prefix = "p";
 
 client.on("ready", () => {
   console.log("I am ready!");
-  client.setGame("Brawl Stars", "https://go.twitch.tv/pallavbs"); // a game
+//  client.setGame("Brawl Stars", "https://go.twitch.tv/pallavbs"); // a game
 
 });
 
