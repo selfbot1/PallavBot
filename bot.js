@@ -31,7 +31,7 @@ client.on("message", (message) => {
     console.log(args)
     let origtext = args.slice(0).join(" "); 
     let chanell=args[0]
-    if(chanell.len() === 20){
+    if(chanell.length() === 20){
       let text = args.slice(1).join(" ");      
       let str=args[0];
       args[1].replace("<#","");
