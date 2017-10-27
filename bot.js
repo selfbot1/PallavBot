@@ -43,6 +43,7 @@ client.on("message", (message) => {
       message.delete();
       channel.send(text);}
     else{
+       message.delete();
        message.channel.send(origtext);}
   }
 });
