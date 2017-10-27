@@ -31,7 +31,9 @@ client.on("message", (message) => {
     console.log(args)
     let origtext = args.slice(0).join(" "); 
     var chanell=args[0];
+    console.log(chanell)
     var len = chanell.length;
+    console.log(len)
     if(len === 20){
       let text = args.slice(1).join(" ");      
       let str=args[0];
