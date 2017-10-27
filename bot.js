@@ -37,7 +37,11 @@ client.on("message", (message) => {
     console.log(targetchannel);
     console.log(channel);
     message.delete();
-    channel.send(text);}
+    if(channel.len() === 17){
+      channel.send(text);}
+    else{
+       message.channel.send(text);}
+  }
 });
 
 // THIS  MUST  BE  THIS  WAY
