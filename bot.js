@@ -33,9 +33,9 @@ client.on("message", (message) => {
     let str=args[1];
     let n=str.replace("<#","");
     let targetchannel=n.replace(">","");
-    let channel = client.channels.get(targetchannel))   
-    console.log(targetchannel)
-    console.log(channel)
+    let channel = client.channels.get(targetchannel);
+    console.log(targetchannel);
+    console.log(channel);
     message.delete();
     message.channel.send(text);}
 });
