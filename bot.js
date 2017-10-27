@@ -30,9 +30,9 @@ client.on("message", (message) => {
   if(command === "say"){
     console.log(args)
     let text = args.slice(1).join(" ");      
-    var str=args[1];
-    var n=str.replace("<#","");
-    var targetchannel=n.replace(">","");
+    let str=args[1];
+    let n=str.replace("<#","");
+    let targetchannel=n.replace(">","");
     let channel = client.channels.get(targetchannel))   
     console.log(targetchannel)
     console.log(channel)
