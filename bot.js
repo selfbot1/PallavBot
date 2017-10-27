@@ -37,7 +37,7 @@ client.on("message", (message) => {
     console.log(targetchannel);
     console.log(channel);
     message.delete();
-    message.channel.send(text);}
+    channel.send(text);}
 });
 
 // THIS  MUST  BE  THIS  WAY
