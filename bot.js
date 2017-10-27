@@ -29,8 +29,8 @@ client.on("message", (message) => {
     message.channel.send("pong!");}
   if(command === "say"){
     let text = args.slice(1).join(" ");      
-    let channelname = args.slice(0);
-    let channel = client.channels.find("name", channelname);
+    let channelname = args[0];
+    const channel = client.channels.find("name", channelname);
 
     message.delete();
     message.channel.send(text);}
