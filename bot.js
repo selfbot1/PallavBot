@@ -7,6 +7,7 @@ client.on("ready", () => {
   console.log("I am ready!");
   //client.user.setPresence({ status: 'Do Not Disturb', game: { name: 'with Pallav.' } });
   client.user.setGame("with Pallav.", "https://go.twitch.tv/pallavbs"); // a game
+  client.user.setStatus("Do Not Disturb); // Set status to DnD
 
 });
 
