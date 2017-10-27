@@ -28,9 +28,9 @@ client.on("message", (message) => {
   if (command === "ping") {
     message.channel.send("pong!");
   if(command === "say"){
-  let text = args.slice(1).join(" ");
-  message.delete();
-  message.channel.send(text);
+    let text = args.slice(1).join(" ");
+    message.delete();
+    message.channel.send(text);
 }
   }
 });
