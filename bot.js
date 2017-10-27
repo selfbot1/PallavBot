@@ -23,9 +23,15 @@ client.on('guildMemberAdd', member => {
 client.on("message", (message) => {
   // Exit and stop if the prefix is not there or if user is a bot
   if (!message.content.startsWith(prefix) || message.author.bot) return;
-  
-  if (message.content.startsWith(prefix + "ping")) {
+  const args = message.content.slice(prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+  if (command === "ping") {
     message.channel.send("pong!");
+  if(command === "say"){
+  let text = args.slice(1).join(" ");
+  message.delete();
+  message.channel.send(text);
+}
   }
 });
 
