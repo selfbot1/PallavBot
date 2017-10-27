@@ -30,7 +30,7 @@ client.on("message", (message) => {
   if(command === "say"){
     console.log(args)
     let origtext = args.slice(0).join(" ");      
-    if(arge[0].len() === 20){
+    if(args[0].len() === 20){
       let text = args.slice(1).join(" ");      
       let str=args[0];
       args[1].replace("<#","");
