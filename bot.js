@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const ytdl = require('ytdl-core');
 // Set the prefix
 let prefix = "p";
 
@@ -50,15 +49,6 @@ client.on("message", (message) => {
        message.channel.send(origtext);}
 
 
-  if(command === "play") {
-    const voiceChannel = message.member.voiceChannel;
-    if (!voiceChannel) return message.reply(`Please be in a voice channel first!`);
-    voiceChannel.join()
-      .then(connnection => {
-        const stream = ytdl(args[0], { filter: 'audioonly' });
-        const dispatcher = connnection.playStream(stream);
-        dispatcher.on('end', () => voiceChannel.leave());
-      });
   }
   }
 });
