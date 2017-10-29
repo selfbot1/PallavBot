@@ -28,20 +28,19 @@ client.on("message", (message) => {
   if (command === "ping") {
     message.channel.send("pong!");}
   if(command === "say"){
+    /*
     console.log(args)
     let origtext = args.slice(0).join(" "); 
     var chanell=args[0];
     console.log(chanell)
     var len = chanell.length;
     console.log(len)
-    if(len === 21){
+    */
+    if(args[0].length === 21){
       let text = args.slice(1).join(" ");      
       let str=args[0];
-      args[1].replace("<#","");
       var targetchannel=args[0].replace("<#","").replace(">","");
       let channel = client.channels.get(targetchannel);
-      console.log(targetchannel);
-      console.log(channel);
       message.delete();
       channel.send(text);}
     else{
