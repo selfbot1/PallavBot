@@ -6,7 +6,7 @@ let prefix = "p";
 client.on("ready", () => {
   console.log("I am ready!");
   //client.user.setPresence({ status: 'Do Not Disturb', game: { name: 'with Pallav.' } });
-  client.user.setGame("with Pallav.", "https://go.twitch.tv/pallavbs"); // a game
+  client.user.setGame("phelp", "https://go.twitch.tv/pallavbs"); // a game
   client.user.setStatus("dnd"); // Set status to DnD
 
 });
