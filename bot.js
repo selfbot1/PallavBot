@@ -27,27 +27,24 @@ client.on("message", (message) => {
   const command = args.shift().toLowerCase();
   if (command === "ping") {
     message.channel.send("pong!");}
-  if(command === "say"){
-    /*
-    console.log(args)
-    let origtext = args.slice(0).join(" "); 
+    
+  if(command === "say") {
+    // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
+    // To get the "message" itself we join the `args` back into a string with spaces: 
+    const sayMessage = args.join(" ");
+    // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
+    message.delete().catch(O_o=>{}); 
+    // And we get the bot to say the thing: 
     var chanell=args[0];
-    console.log(chanell)
     var len = chanell.length;
-    console.log(len)
-    */
-    if(args[0].length === 21){
+    if(len === 21){
       let text = args.slice(1).join(" ");      
       let str=args[0];
       var targetchannel=args[0].replace("<#","").replace(">","");
       let channel = client.channels.get(targetchannel);
-      message.delete();
       channel.send(text);}
     else{
-       message.delete();
-       message.channel.send(origtext);}
-
-
+       message.channel.send(sayMessage);}
   }
   
 });
